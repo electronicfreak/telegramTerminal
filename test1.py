@@ -7,8 +7,8 @@ updater = Updater(token=ms.token)
 dispatcher = updater.dispatcher
 
 def echo(bot, update):
-	bot.sendMessage(chat_id=update.message.chat_id, text="I'm a bot, please talk to me!")
-	print(update.message.text)
+	bot.sendMessage(chat_id=ms.usr_id, text=update.message.chat.first_name+": "+update.message.text)	
+	print(update)
 	
 dispatcher.addTelegramMessageHandler(echo)
 
