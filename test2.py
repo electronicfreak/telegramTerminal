@@ -12,4 +12,4 @@ def echo(bot, update):
 	
 dispatcher.addTelegramMessageHandler(echo)
 
-updater.start_polling(5)
+updater.start_polling()
